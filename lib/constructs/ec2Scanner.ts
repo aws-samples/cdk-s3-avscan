@@ -46,8 +46,7 @@ export class ec2Scanner extends Construct {
         new ec2.WindowsImage(
           ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE
         ),
-      minCapacity: 0,
-      keyName: 'windoof'
+      minCapacity: 0
     });
 
     // Allow EC2s to write to CloudWatch Logs
