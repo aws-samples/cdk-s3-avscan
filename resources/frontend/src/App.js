@@ -25,13 +25,13 @@ Amplify.configure({
       region: window.config ? window.config.region : "eu-central-1",
       userPoolClientId: window.config
         ? window.config.userPoolClientId
-        : "25i1is0fl5qsj8tl98io4n825q",
+        : "",
       userPoolId: window.config
         ? window.config.userPoolId
-        : "eu-central-1_7eOReEqcF",
+        : "",
       identityPoolId: window.config
         ? window.config.identityPoolId
-        : "eu-central-1:408f616d-e83e-4199-8c1b-d8559bdd345d",
+        : "",
       identityPoolRegion: window.config ? window.config.region : "eu-central-1",
     },
   },
@@ -39,7 +39,7 @@ Amplify.configure({
     S3: {
       bucket: window.config
         ? window.config.inputBucket
-        : "s3bucketscanstack-inputbucket3bf8630a-1cn3rjlge1cr2",
+        : "",
       region: window.config ? window.config.region : "eu-central-1",
     },
   },
@@ -70,7 +70,7 @@ function App({ signOut, user }) {
     const result = await listFiles(
       Amplify.getConfig(),
       window.config ? window.config.cleanBucket :
-        "s3bucketscanstack-cleanbucket6216a438-c7nifix77ftv",
+        "",
       "public/" + user.userId + "/"
     );
     console.log(typeof result, result);
@@ -170,7 +170,7 @@ function App({ signOut, user }) {
                           window.open(
                             await getDownloadUrl(
                               Amplify.getConfig(),
-                              "s3bucketscanstack-cleanbucket6216a438-c7nifix77ftv",
+                              window.config ? window.config.cleanBucket : "",
                               item.Key
                             ),
                             "_blank"
