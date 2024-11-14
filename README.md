@@ -2,7 +2,7 @@
 
 ## Overview
 
-This solution provides a comprehensive and scalable virus scanning mechanism for files incoming into an Amazon S3 bucket. It uses multiple antivirus scanners running on Windows, allowing users to choose their preferred solutions. The architecture includes AWS Simple Notification Service (SNS), Amazon Simple Queue Service (SQS), Amazon EC2 instances, managed by an Auto Scaling Group, and an aggregator Lambda function. The repository contains examples to set up the [ClamAV open soruce antivirus engine](https://www.clamav.net/) and Windows Defender. Read the "Config" section to learn how to configure your own AV scanner. 
+This solution provides a comprehensive and scalable virus scanning mechanism for files incoming into an Amazon S3 bucket. It uses multiple antivirus scanners running on Windows, allowing users to choose their preferred solutions. The architecture includes AWS Simple Notification Service (SNS), Amazon Simple Queue Service (SQS), Amazon EC2 instances, managed by an Auto Scaling Group, and an aggregator Lambda function. The repository contains examples to set up the [ClamAV open source antivirus engine](https://www.clamav.net/) and Windows Defender. Read the "Config" section to learn how to configure your own AV scanner. 
 The solution also comes with a minimal frontend, hosted on Amazon S3 + Amazon CloudFront and using Amazon Cognito for authentication and authorization.
 
 ## Architecture Overview
