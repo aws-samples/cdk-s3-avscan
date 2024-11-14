@@ -64,7 +64,7 @@ To configure your own antivirus scanners, you need to create two powershell scri
 * `install.ps1` - Installs the scanner on instance start up
 * `scan.ps1` - Invoked to scan the files. Use the file path as parameter and returns either `CLEAN`, `INFECTED` or `ERROR`
 
-Examples for the [ClamAV open soruce antivirus engine](https://www.clamav.net/) and Windows Defender can be found under `./examples/`
+Examples for the [ClamAV open source antivirus engine](https://www.clamav.net/) and Windows Defender can be found under `./examples/`
 
 In `./lib/s3-bucketscan-stack.ts`, create one construct per scanner:
 
